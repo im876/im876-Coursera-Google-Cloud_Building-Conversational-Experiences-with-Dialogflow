@@ -1,0 +1,140 @@
+{
+  "id": "40cb5a89-1701-4bad-b6bf-120d69369e9b",
+  "name": "order.pizza",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [
+        {
+          "name": "orderpizza-followup",
+          "parameters": {},
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "id": "2011fefa-a3d0-4b51-977f-2dc0594f2f91",
+          "required": true,
+          "dataType": "@sys.date",
+          "name": "date",
+          "value": "$date",
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "What day do you want to pick up your order?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "75ae4803-7f03-422c-9e87-60b34f601ddd",
+          "required": true,
+          "dataType": "@sys.time",
+          "name": "time",
+          "value": "$time",
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "What time do you want to pick up the order?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": true
+        },
+        {
+          "id": "fcacc500-5c0b-40ba-90f1-c16ac1ccb46e",
+          "required": true,
+          "dataType": "@size",
+          "name": "size",
+          "value": "$size",
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "What size pizza do you want?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "c5549f5a-6e7b-43aa-84fa-00e177845a5c",
+          "required": true,
+          "dataType": "@pizza_topping",
+          "name": "pizza_topping",
+          "value": "$pizza_topping",
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "What toppings do you want on your pizza?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": true
+        },
+        {
+          "id": "eaf1ccd2-41b4-4d4a-9aa8-986ff977e0ad",
+          "required": false,
+          "dataType": "@sys.number",
+          "name": "number",
+          "value": "$number",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "b6e5cd4b-99c7-4a46-a405-33e2dbbf6a82",
+          "required": true,
+          "dataType": "@drink_composite",
+          "name": "drink_composite",
+          "value": "$drink_composite",
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "Would you like a drink with your order?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "condition": "",
+          "speech": "Great! We\u0027ve created your order for a $size pizza with $pizza_topping for pickup on $date.original at $time.original. Would you like a drink with that?"
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
